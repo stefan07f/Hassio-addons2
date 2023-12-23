@@ -1,4 +1,4 @@
-#!/usr/bin/env bashio
+#!/usr/bin/with-contenv bashio
 set -x
 export DAHUA_VTO_HOST=$(bashio::config 'intercom.host')
 export DAHUA_VTO_USERNAME=$(bashio::config 'intercom.username')
