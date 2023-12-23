@@ -1,5 +1,4 @@
 #!/usr/bin/env bashio
-rm /tmp/.bashio/* || true
 
 export DAHUA_VTO_HOST=$(bashio::config 'intercom.host')
 export DAHUA_VTO_USERNAME=$(bashio::config 'intercom.username')
@@ -10,6 +9,9 @@ export MQTT_BROKER_PORT=$(bashio::config 'mqtt.port')
 export MQTT_BROKER_USERNAME=$(bashio::config 'mqtt.username')
 export MQTT_BROKER_PASSWORD=$(bashio::config 'mqtt.password')
 export MQTT_BROKER_TOPIC_PREFIX=$(bashio::config 'mqtt.topic_prefix')
+
+env | grep DAHUA
+env | grep MQTT
 
 bashio::log.info "@@@@@@@@@@@@@@@@"
 which curl
