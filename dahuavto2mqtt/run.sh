@@ -1,5 +1,5 @@
 #!/usr/bin/env bashio
-
+set -x
 export DAHUA_VTO_HOST=$(bashio::config 'intercom.host')
 export DAHUA_VTO_USERNAME=$(bashio::config 'intercom.username')
 export DAHUA_VTO_SSL=$(bashio::config 'intercom.ssl')
