@@ -10,7 +10,7 @@
       "amd64",
       "i386"
     ],
-	"init": false,
+	  "init": false,
     "startup": "services",
     "boot": "auto",
     "options": {
