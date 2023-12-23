@@ -1,5 +1,5 @@
 #!/usr/bin/env bashio
-rm /tmp/.bashio/addons.self.options.config.cache
+rm /tmp/.bashio/* || true
 
 export DAHUA_VTO_HOST=$(bashio::config 'intercom.host')
 export DAHUA_VTO_USERNAME=$(bashio::config 'intercom.username')
