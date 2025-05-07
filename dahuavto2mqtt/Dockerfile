@@ -9,11 +9,17 @@ ARG DAHUA_BRANCH="master"
 WORKDIR /app
 
 # Abhängigkeiten installieren – Python ist schon drin, also nur Git und Compiler
-RUN apk update && \
-    apk upgrade && \
-    apk add --no-cache \
-    git \
-    build-base
+ARG BUILD_FROM
+FROM ${BUILD_FROM}
+
+# Installiere Python & Pip hier explizit
+RUN apk add --no-cache \
+    python3 \
+    py3-pip \
+    build-base \
+    git && \
+    ln -sf python3 /usr/bin/python && \
+    pip install --upgrade pip
 
 # Code klonen und Python-Abhängigkeiten installieren
 RUN git clone https://gitlab.com/elad.bar/DahuaVTO2MQTT.git --branch ${DAHUA_BRANCH} . && \
