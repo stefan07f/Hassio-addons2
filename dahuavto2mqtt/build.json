@@ -1,7 +1,7 @@
 {
   "build_from": {
-    "aarch64": "python:3.11-alpine",
-    "amd64": "python:3.11-alpine"
+    "aarch64": "homeassistant/aarch64-base:3.15",
+    "amd64": "homeassistant/amd64-base:3.15"
   },
   "args": {}
 }
